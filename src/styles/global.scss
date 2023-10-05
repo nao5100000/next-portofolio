@@ -17,6 +17,12 @@
     --space-md: calc(var(--space-xs) * 2);
     --space-lg: calc(var(--space-xs) * 3);
     --space-xl: calc(var(--space-xs) * 4);
+
+    --color-dark-gray:#323235;
+    --color-green: #2CD8D5;
+    --color-purple: #C5C1FF;
+    --color-pink: #FFBAC3;
+    --color-gray: #eceff1;
 }
 :root,
 .is-theme-light {
@@ -64,6 +70,14 @@ body {
     margin: 0;
     color: var(--font-color);
     background: var(--base-color);
+}
+a {
+    color: var(--font-color);
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 html,

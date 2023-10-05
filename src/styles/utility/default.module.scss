@@ -1,0 +1,8 @@
+.default{
+    width: min(90%,960px);
+    margin: 0 auto;
+}
+.large{
+    composes: default;
+    width: 90%;
+}

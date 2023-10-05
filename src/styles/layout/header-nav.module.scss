@@ -1,0 +1,51 @@
+.header__nav{
+    ul{
+        // composes: flex-end from "/src/styles/utility/flex.module.css";
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap:wrap;
+        li{
+            will-change: transform;
+            margin: 0 10px;
+            span{
+                display: none;
+            }
+            a{
+                position: relative;
+                transition: transform .3s var(--cb01);
+                i{
+                    display: none;
+                }
+                &::after{
+                    content: "";
+                    display: block;
+                    background: var(--font-color);
+                    width: 0px;
+                    height: 0px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -10px;
+                    transform: translate(-50%,0);
+                    transition: width .3s ease-in-out,height .3s ease-in-out;
+                }
+            }
+            &:hover{
+                a{
+                    &::after{
+                        width: 6px;
+                        height: 6px;
+                    }
+                }
+            }
+            &.only-sp{
+                display: none;
+            }
+        }
+        a{
+            min-width: 80px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+}
